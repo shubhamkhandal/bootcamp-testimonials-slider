@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="main.css">
+  
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+
+  
+</head>
+<body>
+  <section id="Testimonial-section">
+    <!-- background imgs -->
+   <!-- <div class="testimonial-bg">
+      <div class="bg-img-left"></div>
+    </div> -->
+
+    <!-- main div -->
+    <div class="Testimonial-container">
+      <div class="testimonial-slide fade">
+        <div class="row">
+          <div class="col-text">
+            <p>
+              “ I’ve been interested in coding for a while but never taken the jump, until now. 
+            I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+            excited about the future. ”
+            </p>
+            <small>Tanya Sinclair, UX Engineer</small>
+          </div>
+          <div class="col-img">
+            <img src="/images/image-tanya.jpg" alt="tanya" />
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-slide fade" style="display: none;">
+        <div class="row">
+          <div class="col-text">
+            <p>
+              “ If you want to lay the best foundation possible I’d recommend taking this course. 
+            The depth the instructors go into is incredible. I now feel so confident about 
+            starting up as a professional developer. ”
+            </p>
+            <small>John Tarkpor
+              Junior Front-end Developer</small>
+          </div>
+          <div class="col-img">
+            <img src="/images/image-john.jpg" alt="john" />
+          </div>
+        </div>
+      </div>
+
+      <div class="navigation-btn">
+         <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+    
+  </section>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // next slide
+  function plusSlides(n){
+    showSlides(slideIndex += n);
+  }
+
+  // carousel control
+  function currentSlide(n){
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n){
+    var i;
+    var slides = document.getElementsByClassName("testimonial-slide");
+
+    if(n > slides.length){
+      slideIndex = 1;
+    };
+     if(n > 1){
+       slideIndex = slides.length;
+     }
+
+     for(i=0; i< slides.length; i++){
+       slides[i].style.display = "none";
+     }
+     slides[slideIndex-1].style.display = "block";
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!--
+
+  
+
+ 
+  
+  -->
+</body>
+</html>
